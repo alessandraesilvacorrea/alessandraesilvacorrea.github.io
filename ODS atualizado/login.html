@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoer" content="width=device-width, initial-scale=1.0">
+    <title> QR da Fome</title> 
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="src/fakerecaptcha.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="home.html" class="form" method="get">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="email" placeholder="E-mail" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Senha" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Manter Login</label>
+                <a href="#">Esqueci a senha</a>
+            </div>
+        <div class="fkrc-container fkrc-m-p">
+            <!-- Captcha checkbox widget -->
+            <div id="fkrc-checkbox-window" class="fkrc-checkbox-window fkrc-m-p fkrc-block">
+                <div class="fkrc-checkbox-container fkrc-m-p">
+                    <button type="button" id="fkrc-checkbox" class="fkrc-checkbox fkrc-m-p fkrc-line-normal"></button>
+                </div>
+                <p class="fkrc-im-not-a-robot fkrc-m-p fkrc-line-normal">Eu não sou um robô</p>
+                <img src="images/captcha_logo.svg" class="fkrc-captcha-logo fkrc-line-normal" alt="">
+                <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">CAPTCHA</p>
+                <p class="fkrc-checkbox-desc fkrc-m-p fkrc-line-normal">Privacy - Terms</p>
+                <img src="images/captcha_spinner.gif" class="fkrc-spinner fkrc-m-p fkrc-line-normal" alt="" id="fkrc-spinner">
+            </div>
+            <!-- Captcha checkbox verification window -->
+            <div id="fkrc-verifywin-window" class="fkrc-verifywin-window">
+                <div class="fkrc-verifywin-container">
+                    <header class="fkrc-verifywin-header">
+                        <span class="fkrc-verifywin-header-text-medium fkrc-m-p fkrc-block">Este é um</span>
+                        <span class="fkrc-verifywin-header-text-big fkrc-m-p fkrc-block">Captcha Falso</span>
+                        <span class="fkrc-verifywin-header-text-medium fkrc-m-p fkrc-block">Feito para combinar com o protótipo feito no Figma</span>
+                    </header>
+                    <main class="fkrc-verifywin-main">
+                        Your content
+                    </main>
+                </div>
+                <footer class="fkrc-verifywin-container fkrc-verifywin-footer">
+                    <div class="fkrc-verifywin-footer-left">
+                        Pressione o botão verificar para continuar.
+                    </div>
+                    <button type="button" class="fkrc-verifywin-verify-button fkrc-block" id="fkrc-verifywin-verify-button">Verificar</button>
+                </footer>
+            </div>
+            <img src="images/captcha_arrow.svg" alt="" class="fkrc-verifywin-window-arrow" id="fkrc-verifywin-window-arrow"/>
+        </div>
+        <a href="home.html"><button type="submit" class="btn">Login</button></a>
+            <div class="register-link">
+                <p> Não tem uma conta? <a href="register.html">Registre-se!</a></p> 
+            </div>
+        </form>
+    </div>
+    <script src="src/fakerecaptcha.js"></script>
+</body>
+</html>
+
