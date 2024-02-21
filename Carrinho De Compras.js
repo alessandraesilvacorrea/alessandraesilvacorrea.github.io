@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (currentQuantity > 1) {
         quantityElement.textContent = currentQuantity - 1;
       } else {
-        // Se a quantidade for 1, você pode remover o item
-        var row = button.closest('tr');
+        // Se a quantidade for 0, você pode remover o item
+        var row = button.closest('tr');s
         row.parentNode.removeChild(row);
       }
       updateTotal();
@@ -37,16 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Função para atualizar o total da compra
-  function updateTotal() {
-    var totalElements = document.querySelectorAll('.content table tbody tr td:nth-child()');
-    var total = 0;
-    totalElements.forEach(function(element) {
-      total += parseFloat(element.textContent.replace('R$ ', ''));
-    });
+// Função para atualizar o total da compra
+function updateTotal() {
+  var totalElements = document.querySelectorAll('.content table tbody tr td:nth-child()');
+  var total = 0;
+  totalElements.forEach(function(element) {
+    total += parseFloat(element.textContent.replace('R$ ', ''));
+  });
 
-    // Atualiza o total na parte inferior da tabela
-    var totalFooter = document.querySelector('.box footer span:nth-child()'); // Ajuste aqui
-    totalFooter.textContent = 'R$ ' + total.toFixed(2);
-  }
+  // Atualiza o total na parte inferior da tabela
+  var totalFooter = document.querySelector('.box footer span:nth-child()'); // Ajuste aqui
+  totalFooter.textContent = 'R$ ' + total.toFixed(2);
+}
 });
