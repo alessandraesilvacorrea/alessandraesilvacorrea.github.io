@@ -12,9 +12,10 @@
   <link rel="stylesheet" type="text/css" href="feedback.css" media="screen" />
   <h2>Feedback</h2>
   <form id="feedback" name="feedback" accept-charset="utf-8">
-    <label><span>Nome</span><input name="name" type="text"placeholder= "Nome completo"/></label>
-    <label><span>Email</span><input name="email" type="email" placeholder="example@uea.edu.br"/></label>
-    <label><span>Feedback</span><textarea name="feedback" placeholder="Escreva uma sugestão, crítica ou melhoria para o restaurante."></textarea></label>
+    <label><span>Data</span><input data-ls-module="charCounter" maxlength="10" name="data" type="datetime-local" placeholder= "dd/mm/aaaa"/></label>
+    <label><span>Nome</span><input data-ls-module="charCounter" maxlength="40" name="name" type="text"placeholder= "Nome completo"/></label>
+    <label><span>Feedback</span><textarea  data-ls-module="charCounter" maxlength="300" name="feedback" placeholder="Escreva uma sugestão, crítica ou melhoria para o restaurante. (Máximo de 300 caracteres)"></textarea></label>
+    </label>
     <input name="submit" type="submit" value="Enviar"/>
   </form>
 </section>
