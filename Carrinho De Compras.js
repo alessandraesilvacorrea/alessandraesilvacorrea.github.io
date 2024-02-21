@@ -5,8 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function() {
       var quantityElement = button.parentNode.querySelector('span');
       var currentQuantity = parseInt(quantityElement.textContent, 10);
-      quantityElement.textContent = currentQuantity + 1;
-      updateTotal();
+      
+      if (currentQuantity < 1) { // Verifica se a quantidade atual é menor que 1
+        quantityElement.textContent = currentQuantity + 1;
+        updateTotal();
+      } else {
+        alert("Você já atingiu a quantidade máxima (1) para este item. Você só pode comprar uma ficha de cada refeição por dia.");
+      }
     });
   });
 
